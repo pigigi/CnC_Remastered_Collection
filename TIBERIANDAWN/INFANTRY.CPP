@@ -2923,7 +2923,7 @@ ActionType InfantryClass::What_Action(ObjectClass * object) const
 
 	if (Class->IsCapture && action == ACTION_ATTACK) {
 		if (object->Owner() != Owner() &&
-			((object->What_Am_I() == RTTI_AIRCRAFT && ((AircraftClass *)object)->Pip_Count() == 0 && *((AircraftClass *)object) == AIRCRAFT_TRANSPORT) ||
+			((object->What_Am_I() == RTTI_AIRCRAFT && ((AircraftClass *)object)->Pip_Count() == 0 && *((AircraftClass *)object) == AIRCRAFT_TRANSPORT) ||	// any infantry can capture an empty chinook
 			(object->What_Am_I() == RTTI_BUILDING &&
 				((BuildingClass *)object)->Can_Capture()))
 			) {

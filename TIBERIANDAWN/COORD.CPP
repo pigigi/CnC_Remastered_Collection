@@ -302,6 +302,10 @@ COORDINATE Coord_Move(COORDINATE start, register DirType dir, unsigned short dis
  *                                                                                             *
  *          cardinal -- The other number (hey -- what do you call it?)                         *
  *                                                                                             *
+ *          HOW ABOUT FUCKING NUMERATOR AND DENOMINATOR YOU TWAT                               *
+ *          DIDN'T ANYONE FUCKING FINISH HIGH FUCKING SCHOOL AT FUCKING WESTWOOD FFS           *
+ *          FUCKING WOW                                                                        *
+ *                                                                                             *
  * OUTPUT:  Returns with the fixed point number of the "cardinal" parameter as it relates      *
  *          to the "base" parameter.                                                           *
  *                                                                                             *

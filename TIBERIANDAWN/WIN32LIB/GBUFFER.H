@@ -1156,7 +1156,7 @@ inline VOID GraphicViewPortClass::Draw_Line(int sx, int sy, int dx, int dy, unsi
 /***************************************************************************
  * GVPC::FILL_RECT -- Stub function to fill rectangle in a GVPC            *
  *                                                                         *
- * INPUT:                                                                  *
+ * INPUT: sx, sy are start position, dx, dy are destination, NOT delta!    *
  *                                                                         *
  * OUTPUT:                                                                 *
  *                                                                         *

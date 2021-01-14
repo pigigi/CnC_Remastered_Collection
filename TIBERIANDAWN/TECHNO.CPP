@@ -2121,8 +2121,8 @@ FireErrorType TechnoClass::Can_Fire(TARGET target, int which) const
 	**	sitting on the ground.
 	*/
 	if (object && object->What_Am_I() == RTTI_AIRCRAFT &&
-			!BulletTypeClass::As_Reference(Weapons[weap].Fires).IsAntiAircraft &&
-			((AircraftClass *)object)->Altitude > 0) {
+			BulletTypeClass::As_Reference(Weapons[weap].Fires).IsAntiAircraft ||
+			((AircraftClass *)object)->Altitude == 0) {
 
 		return(FIRE_CANT);
 	}

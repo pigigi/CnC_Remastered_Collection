@@ -581,8 +581,11 @@ int FootClass::Mission_Move(void)
  *=============================================================================================*/
 int FootClass::Mission_Capture(void)
 {
+	// if target is gone
 	if (!Target_Legal(NavCom) && !In_Radio_Contact()) {
 		Enter_Idle_Mode();
+
+		// if was in the process of entering the target
 		if (Map[Coord_Cell(Center_Coord())].Cell_Building()) {
 			Scatter(0, true);
 		}
@@ -663,7 +666,7 @@ int FootClass::Mission_Hunt(void)
 	if (!Target_Something_Nearby(THREAT_NORMAL)) {
 		Random_Animate();
 	} else {
-		if (What_Am_I() == RTTI_INFANTRY && ((InfantryTypeClass const &)Class_Of()).Type == INFANTRY_E7) {
+		if (What_Am_I() == RTTI_INFANTRY && ((InfantryTypeClass const &)Class_Of()).Type == INFANTRY_E7) {	// if engie
 			Assign_Destination(TarCom);
 			Assign_Mission(MISSION_CAPTURE);
 		} else {
